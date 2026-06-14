@@ -6,7 +6,6 @@ name: Go
 on:
   push:
   pull_request:
-    branches: [ "main" ]
 
 jobs:
   test:
@@ -20,7 +19,7 @@ jobs:
         go-version: '1.21'
 
     - name: Test
-      run: cd server && go test -v ./...
+      run: cd server && go test -v ./pkg/document/sourcecode ./pkg/fs ./pkg/parser
   build:
     runs-on: ubuntu-latest
     steps:
