@@ -39,7 +39,7 @@ func (s *Option[_]) IsNone() bool {
 }
 
 func (s *Option[_]) IsSome() bool {
-	return s.isFull
+	return !s.isFull
 }
 
 func (s Option[T]) String() string {
